@@ -23,6 +23,7 @@ pipeline {
         stage('prepare') {
             agent any
             steps {
+                echo env.BRANCH_NAME
                 echo env.DEPLOY_TO_DEV
             }
         }
