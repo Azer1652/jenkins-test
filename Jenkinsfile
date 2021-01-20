@@ -15,10 +15,6 @@ pipeline {
         booleanParam(name: 'SONAR', defaultValue: true, description: '')
         string(name: 'DOCKER_TAG', defaultValue: '', description: 'e.g. 1.0.0-130-a609246c')
     }
-    tools {
-        maven "${config.mavenVersion}"
-        jdk "${config.javaVersion}"
-    }
     triggers {
         cron('@daily')
         pollSCM('H/5 * * * *')
