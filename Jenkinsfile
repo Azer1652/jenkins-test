@@ -23,7 +23,7 @@ pipeline {
         stage('prepare') {
             agent any
             steps {
-                echo env.DEPLOY_TO_DEV.toBoolean()
+                echo env.DEPLOY_TO_DEV
             }
         }
     }
